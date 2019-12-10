@@ -1,12 +1,12 @@
 use groupstest;
 SELECT * FROM groupstest.unreg_user_x_group un
 INNER JOIN groupstest.group gr ON un.group_id=gr.id
-WHERE gr.creator_user_id = 209915215;
+WHERE gr.creator_user_id = -1;
 SELECT * FROM groupstest.reg_user_x_group re
 INNER JOIN groupstest.group gr ON re.group_id=gr.id
-WHERE gr.creator_user_id = 209915215;
-SELECT * FROM groupstest.group WHERE creator_user_id = 209915215;
-SELECT * FROM groupstest.reg_user_x_group re WHERE re.user_id=209915215;
+WHERE gr.creator_user_id = -1;
+SELECT * FROM groupstest.group WHERE creator_user_id = -1;
+SELECT * FROM groupstest.reg_user_x_group re WHERE re.user_id=-1;
 
 /*SET SQL_SAFE_UPDATES = 0;
 -- Borro donde es collector
